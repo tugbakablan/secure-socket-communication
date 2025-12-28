@@ -42,4 +42,4 @@ via RSA-based key exchange, and communicate using AES-encrypted messages.
 
 ## Empty Version
 
-<img width="2400" height="600" alt="image" src="https://github.com/user-attachments/assets/7b1f230b-9ba8-48e8-ac5f-94b74d94aed1" /> <img width="400" height="600" alt="image" src="https://github.com/user-attachments/assets/aa7cbced-0938-4614-b9df-24cf18ef9e28" />
+<img width="400" height="600" alt="image" src="https://github.com/user-attachments/assets/7b1f230b-9ba8-48e8-ac5f-94b74d94aed1" /> <img width="400" height="600" alt="image" src="https://github.com/user-attachments/assets/aa7cbced-0938-4614-b9df-24cf18ef9e28" />

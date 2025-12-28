@@ -9,7 +9,7 @@ This project demonstrates a complete secure communication workflow over TCP sock
 Clients authenticate using certificates issued by a custom CA, establish a secure session
 via RSA-based key exchange, and communicate using AES-encrypted messages.
 
-<img width="584" height="314" alt="image" src="https://github.com/user-attachments/assets/7b1f230b-9ba8-48e8-ac5f-94b74d94aed1" /> <img width="727" height="439" alt="image" src="https://github.com/user-attachments/assets/aa7cbced-0938-4614-b9df-24cf18ef9e28" />
+<img width="250" height="107" alt="image" src="https://github.com/user-attachments/assets/7b1f230b-9ba8-48e8-ac5f-94b74d94aed1" /> <img width="350" height="200" alt="image" src="https://github.com/user-attachments/assets/aa7cbced-0938-4614-b9df-24cf18ef9e28" />
 
 ## Technologies
 - C#

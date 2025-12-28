@@ -11,9 +11,6 @@ via RSA-based key exchange, and communicate using AES-encrypted messages.
 
 <img width="1919" height="748" alt="image" src="https://github.com/user-attachments/assets/f7b141b0-173b-46c6-87cd-b595e2d979c5" />
 
-
-<img width="250" height="107" alt="image" src="https://github.com/user-attachments/assets/7b1f230b-9ba8-48e8-ac5f-94b74d94aed1" /> <img width="350" height="200" alt="image" src="https://github.com/user-attachments/assets/aa7cbced-0938-4614-b9df-24cf18ef9e28" />
-
 ## Technologies
 - C#
 - .NET
@@ -42,3 +39,7 @@ via RSA-based key exchange, and communicate using AES-encrypted messages.
 3. Request and verify certificates from the CA.
 4. Register clients in the directory service.
 5. Establish a secure session and exchange encrypted messages.
+
+## Empty Version
+
+<img width="2400" height="600" alt="image" src="https://github.com/user-attachments/assets/7b1f230b-9ba8-48e8-ac5f-94b74d94aed1" /> <img width="400" height="600" alt="image" src="https://github.com/user-attachments/assets/aa7cbced-0938-4614-b9df-24cf18ef9e28" />

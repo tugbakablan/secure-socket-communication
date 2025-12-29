@@ -50,8 +50,16 @@ namespace CertificateAuthority
 
         void BroadcastLoop()
         {
-            UdpClient udp = new UdpClient(); udp.EnableBroadcast = true;
-            IPEndPoint groupEP = new IPEndPoint(IPAddress.Broadcast, 8888);
+            UdpClient udp = new UdpClient();
+            udp.EnableBroadcast = true;
+
+            // CA IP ve subnet mask al
+            IPAddress localIP = IPAddress.Parse(txtIP.Text);
+            IPAddress subnetMask = IPAddress.Parse("255.255.255.240"); // kendi subnet mask’in
+            IPAddress broadcastIP = GetBroadcastAddress(localIP, subnetMask);
+
+            IPEndPoint groupEP = new IPEndPoint(broadcastIP, 8888);
+
             while (broadcasting)
             {
                 try
@@ -64,6 +72,24 @@ namespace CertificateAuthority
                 catch { }
             }
         }
+
+        // Broadcast adresi hesaplama
+        public static IPAddress GetBroadcastAddress(IPAddress address, IPAddress subnetMask)
+        {
+            byte[] ipAdressBytes = address.GetAddressBytes();
+            byte[] subnetMaskBytes = subnetMask.GetAddressBytes();
+
+            if (ipAdressBytes.Length != subnetMaskBytes.Length)
+                throw new ArgumentException("Length mismatch between IP and subnet mask");
+
+            byte[] broadcastAddress = new byte[ipAdressBytes.Length];
+            for (int i = 0; i < broadcastAddress.Length; i++)
+            {
+                broadcastAddress[i] = (byte)(ipAdressBytes[i] | (subnetMaskBytes[i] ^ 255));
+            }
+            return new IPAddress(broadcastAddress);
+        }
+
 
         void HandleClient(TcpClient client)
         {

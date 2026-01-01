@@ -53,9 +53,8 @@ namespace CertificateAuthority
             UdpClient udp = new UdpClient();
             udp.EnableBroadcast = true;
 
-            // CA IP ve subnet mask al
             IPAddress localIP = IPAddress.Parse(txtIP.Text);
-            IPAddress subnetMask = IPAddress.Parse("255.255.255.240"); // kendi subnet mask’in
+            IPAddress subnetMask = IPAddress.Parse("255.255.255.240");
             IPAddress broadcastIP = GetBroadcastAddress(localIP, subnetMask);
 
             IPEndPoint groupEP = new IPEndPoint(broadcastIP, 8888);
@@ -73,7 +72,6 @@ namespace CertificateAuthority
             }
         }
 
-        // Broadcast adresi hesaplama
         public static IPAddress GetBroadcastAddress(IPAddress address, IPAddress subnetMask)
         {
             byte[] ipAdressBytes = address.GetAddressBytes();
